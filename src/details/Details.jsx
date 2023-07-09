@@ -92,7 +92,7 @@ const Details = ({ countries, toggle, isLoading }) => {
                   <dt className='key'>Border Countries:</dt>
                   {(Array.isArray(details.borders)) ?
                     <section className={`border-items flex ${toggle ? 'dark' : 'light'}`}>
-                      {details.borders.map((border, index) => <dd key={index} className='value br-5'><Link to={`/countries/${getBorderNames(border)}`}>{getBorderNames(border)}</Link></dd>)}
+                      {details.borders.map((border, index) => <dd key={index} className='value br-5'><Link to={`/rest-countries-api/countries/${getBorderNames(border)}`}>{getBorderNames(border)}</Link></dd>)}
                     </section>
                     : <dd className='value'>{details.borders}</dd>}
                 </dl>
