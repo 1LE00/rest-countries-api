@@ -1,0 +1,67 @@
+.form-search {
+  gap: 1.25rem;
+  padding: 1rem 1rem 1rem 1.5rem;
+  transition: var(--transition-color), var(--transition-background-color),
+    var(--transition-box-shadow);
+}
+
+.form-search.dark {
+  background-color: var(--dark-bg);
+  box-shadow: var(--dark-box-shadow);
+}
+
+.form-search.light {
+  background-color: var(--light-bg);
+  box-shadow: var(--light-box-shadow);
+}
+
+.form-search svg {
+  width: 1.75rem;
+}
+
+.form-search.light svg path {
+  transition: stroke 0.25s ease-in;
+  stroke: hsl(var(--clr-light-mode-input));
+}
+
+.form-search input {
+  width: 100%;
+  font-size: var(--fs-home);
+  font-weight: 500;
+  transition: var(--transition-color);
+}
+
+.form-search input::placeholder {
+  font-size: var(--fs-home);
+  font-weight: 300;
+  transition: font-size 0.25s ease-in, var(--transition-color);
+}
+
+.form-search.dark input,
+.form-search.dark input::placeholder {
+  color: var(--dark-color);
+}
+
+.form-search.light input {
+  color: var(--light-color);
+}
+
+.form-search.light input::placeholder {
+  color: hsl(var(--clr-light-mode-input));
+}
+
+.form-search input:focus-within::placeholder {
+  font-size: 0.7rem;
+}
+
+@media screen and (min-width: 768px) {
+  .form-search {
+    width: 350px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .form-search {
+    width: 425px;
+  }
+}

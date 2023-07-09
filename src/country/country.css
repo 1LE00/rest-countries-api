@@ -1,0 +1,85 @@
+.country {
+  max-width: 280px;
+  cursor: pointer;
+  transition: var(--transition-box-shadow);
+}
+
+.country.dark {
+  box-shadow: var(--dark-box-shadow);
+}
+
+.country.light {
+  box-shadow: var(--light-box-shadow);
+}
+
+.country.light .flag {
+  filter: drop-shadow(var(--light-box-shadow))
+    drop-shadow(-1px 0 10px hsl(var(--clr-light-mode-input), 0.1));
+  transition: drop-shadow 0.25s ease-out;
+}
+
+.flag {
+  max-width: 280px;
+}
+
+.flag img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px 5px 0 0;
+}
+
+.country-content {
+  gap: 1rem;
+  min-height: 179px;
+  align-items: flex-start;
+  padding: 1.75rem 1.5rem 2.5rem;
+  transition: var(--transition-background-color);
+}
+
+.country-content.dark {
+  background-color: var(--dark-bg);
+}
+
+.country-content.light {
+  background-color: var(--light-bg);
+}
+
+.country-name {
+  font-size: var(--fs-400);
+  transition: var(--transition-color);
+}
+
+.country-content.dark > .country-name,
+.micro-details.dark > dl {
+  color: var(--dark-color);
+}
+
+.country-content.light > .country-name,
+.micro-details.light > dl {
+  color: var(--light-color);
+}
+
+.micro-details {
+  align-items: flex-start;
+}
+
+.micro-details > dl {
+  gap: 0.25rem;
+  font-size: var(--fs-home);
+  transition: var(--transition-color);
+}
+
+.micro-details > dl > dt {
+  font-weight: 600;
+}
+
+.micro-details > dl > dd {
+  font-weight: 300;
+  transition: var(--transition-color);
+}
+
+.micro-details.dark > dl > dd {
+  color: var(--dark-value);
+}

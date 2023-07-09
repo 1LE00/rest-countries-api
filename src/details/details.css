@@ -1,0 +1,232 @@
+.details {
+  gap: 4rem;
+  align-items: flex-start;
+  padding-block: 3rem 5rem;
+  padding-inline: calc(var(--padding-inline) + 1rem);
+}
+
+.go-back {
+  width: 110px;
+  gap: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  font-size: var(--fs-home);
+  transition: var(--transition-color), var(--transition-background-color),
+    var(--transition-box-shadow);
+}
+
+.go-back b {
+  font-weight: 600;
+}
+
+.go-back.dark {
+  color: var(--dark-value);
+  background-color: var(--dark-bg);
+  box-shadow: var(--dark-box-shadow);
+}
+
+.go-back.dark:hover {
+  color: var(--dark-color);
+  background-color: hsl(var(--clr-dark-mode-elements), 0.75);
+}
+
+.go-back.light {
+  color: var(--light-color);
+  background-color: var(--light-bg);
+  box-shadow: var(--light-box-shadow);
+}
+
+.go-back.light:hover {
+  background-color: hsl(var(--clr-light-mode-bg), 0.5);
+  color: hsl(var(--clr-light-mode-text), 0.75);
+}
+
+.go-back svg {
+  width: 20px;
+}
+
+.go-back svg path {
+  transition: fill 0.5s ease-out;
+}
+
+.go-back.dark svg path {
+  fill: var(--dark-color);
+}
+
+.go-back.light svg path {
+  fill: var(--light-color);
+}
+
+.go-back.light:hover svg path {
+  fill: hsl(var(--clr-dark-mode-elements), 0.75);
+}
+
+.details-section {
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.flag-container {
+  transition: drop-shadow 0.25s ease-out;
+}
+
+.flag-container.dark {
+  filter: drop-shadow(var(--dark-box-shadow))
+    drop-shadow(-1px 0 10px hsl(var(--clr-light-mode-text), 0.1));
+}
+.flag-container.light {
+  filter: drop-shadow(var(--light-box-shadow))
+    drop-shadow(-1px 0 10px hsl(var(--clr-light-mode-input), 0.1));
+}
+
+.country-info {
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.country-info > .country-common-name {
+  font-weight: 800;
+  transition: var(--transition-color);
+}
+
+.country-info.dark > .country-common-name,
+.country-stats > section.dark > dl,
+.country-borders.dark .key,
+.country-borders.dark > .value,
+.border-items.dark .value a {
+  color: var(--dark-color);
+}
+
+.country-info.light > .country-common-name,
+.country-stats > section.light > dl,
+.country-borders.light .key,
+.country-borders.light > .value,
+.border-items.border-items.light .value a {
+  color: var(--light-color);
+}
+
+.country-stats {
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.country-stats > :is(section, dl) {
+  gap: 1rem;
+  align-items: flex-start;
+  font-size: var(--fs-home);
+  font-weight: 600;
+}
+
+.country-stats > section > dl {
+  gap: 0.35rem;
+  transition: var(--transition-color);
+}
+
+.country-stats > :is(section, dl) .key {
+  font-weight: 600;
+}
+
+.country-stats > :is(section.light, dl.light) .key {
+  font-weight: 800;
+}
+
+.country-stats > section .value {
+  font-weight: 400;
+  transition: var(--transition-color);
+}
+
+.country-stats > section.dark .value {
+  color: var(--dark-value);
+}
+
+.country-borders .key {
+  font-size: var(--fs-400);
+  transition: var(--transition-color);
+}
+
+.border-items {
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.border-items .value {
+  padding: 0.5rem 0;
+  transition: var(--transition-background-color), var(--transition-box-shadow);
+}
+
+.border-items.dark .value {
+  background-color: var(--dark-bg);
+  box-shadow: var(--dark-box-shadow);
+}
+
+.border-items.dark .value:hover {
+  background-color: hsl(var(--clr-dark-mode-elements), 0.75);
+}
+
+.border-items.light .value {
+  background-color: var(--light-bg);
+  box-shadow: var(--light-box-shadow);
+}
+
+.border-items.light .value:hover {
+  background-color: hsl(var(--clr-light-mode-bg), 0.75);
+}
+
+.border-items .value a {
+  padding: 0.5rem 2rem;
+  transition: var(--transition-color);
+}
+
+.border-items.light .value:hover a {
+  color: hsl(var(--clr-light-mode-text), 0.75);
+}
+
+.border-items.dark .value:hover a {
+  color: hsl(var(--clr-light-mode-bg), 0.75);
+}
+
+@media screen and (min-width: 1024px) {
+  .details {
+    padding-inline: var(--padding-inline);
+  }
+  .details-section {
+    flex-direction: row;
+  }
+
+  .flag-container {
+    width: 40%;
+  }
+
+  .flag-container img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .country-info {
+    width: 60%;
+    gap: 2rem;
+    align-self: center;
+    justify-content: center;
+  }
+
+  .country-stats {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .country-borders {
+    width: 100%;
+    gap: 1.5rem !important;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .details-section {
+    gap: 10rem;
+    justify-content: space-between;
+  }
+
+  .country-stats {
+    gap: 5rem;
+  }
+}

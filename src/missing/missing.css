@@ -1,0 +1,41 @@
+.missing {
+  gap: 1rem;
+  align-items: flex-start;
+  margin-block-start: 2.5rem;
+  padding-inline: var(--padding-inline);
+}
+
+.missing.dark,
+.missing.dark p a {
+  color: var(--dark-color);
+}
+
+.missing.dark h1 span {
+  color: hsl(174, 100%, 93%);
+}
+.missing.light h1 span {
+  color: hsl(265, 66%, 45%);
+}
+
+.missing.light,
+.missing.missing.light p a {
+  color: var(--light-color);
+}
+
+.missing p {
+  font-weight: 600;
+}
+
+.missing p a {
+  font-weight: 400;
+  text-decoration: underline;
+  transition: var(--transition-color);
+}
+
+.missing.dark p a:hover {
+  color: hsl(var(--clr-white), 0.8);
+}
+
+.missing.light p a:hover {
+  color: hsl(var(--clr-light-mode-text), 0.75);
+}

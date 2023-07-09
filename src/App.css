@@ -1,38 +1,46 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  --light-bg: hsl(var(--clr-white));
+  --dark-color: hsl(var(--clr-white));
+  --dark-value: hsl(var(--clr-white), 0.75);
+  --transition-color: color 0.25s ease-out;
+  --light-color: hsl(var(--clr-light-mode-text));
+  --dark-bg: hsl(var(--clr-dark-mode-elements));
+  --transition-box-shadow: box-shadow 0.25s ease-in-out;
+  --transition-background-color: background-color 0.25s ease-in;
+  --dark-box-shadow: 0 2px 10px hsl(var(--clr-light-mode-text), 0.25);
+  --light-box-shadow: 0 2px 10px hsl(var(--clr-light-mode-input), 0.25);
+  transition: var(--transition-background-color);
 }
 
-.App-link {
-  color: #61dafb;
+.App.dark {
+  background-color: hsl(var(--clr-dark-mode-bg));
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App.light {
+  background-color: hsl(var(--clr-light-mode-bg));
+}
+
+@media screen and (min-width: 375px) {
+  :root {
+    --padding-inline: 1.75rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --padding-inline: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --padding-inline: 4rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  :root {
+    --padding-inline: 5rem;
   }
 }

@@ -1,0 +1,38 @@
+.countries {
+  gap: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-block: 3rem 5rem;
+  padding-inline: var(--padding-inline);
+}
+
+.no-countries {
+  font-weight: 600;
+  transition: var(--transition-color);
+}
+
+.no-countries span {
+  font-weight: 800;
+}
+
+.countries.dark .no-countries {
+  color: var(--dark-color);
+}
+
+.countries.light .no-countries {
+  color: var(--light-color);
+}
+
+@media screen and (min-width: 768px) {
+  .countries {
+    justify-content: space-around;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .countries {
+    gap: 3.2rem;
+    justify-content: space-between;
+  }
+}
