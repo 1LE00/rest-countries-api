@@ -47,7 +47,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Layout toggle={toggle} setToggle={setToggle} />}>
+      <Route path="/rest-countries-api" element={<Layout toggle={toggle} setToggle={setToggle} />}>
         <Route index
           element={
             <Home
@@ -69,7 +69,7 @@ function App() {
         />
         <Route path='*' element={<Missing toggle={toggle} />} />
       </Route>
-      <Route path="/countries" element={<Layout toggle={toggle} setToggle={setToggle} />}>
+      <Route path="/rest-countries-api/countries" element={<Layout toggle={toggle} setToggle={setToggle} />}>
         <Route index
           element={
             <Home toggle={toggle}

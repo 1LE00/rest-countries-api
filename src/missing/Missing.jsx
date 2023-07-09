@@ -5,7 +5,7 @@ const Missing = ({ toggle }) => {
   return (
     <section className={`missing flex flex-column ${toggle ? 'dark' : 'light'}`}>
       <h1>Page Not Found</h1>
-      <p>Return to <Link to='/'>Homepage</Link></p>
+      <p>Return to <Link to='/rest-countries-api'>Homepage</Link></p>
     </section>
   )
 }

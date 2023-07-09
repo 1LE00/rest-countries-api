@@ -40,7 +40,7 @@ const Details = ({ countries, toggle, isLoading }) => {
     isLoading ? <SkeletonDetails toggle={toggle} />
       : Object.entries(currentCountry).length > 0 ?
         <section className={`details ${currentCountry.name.common.toLowerCase()}-details flex flex-column`}>
-          <Link to='/countries' className={`go-back flex ${toggle ? 'dark' : 'light'} br-5`}>
+          <Link to='/rest-countries-api/countries' className={`go-back flex ${toggle ? 'dark' : 'light'} br-5`}>
             <Arrow />
             <b>Back</b>
           </Link>
@@ -102,7 +102,7 @@ const Details = ({ countries, toggle, isLoading }) => {
         </section>
         : <section className={`missing flex flex-column ${toggle ? 'dark' : 'light'}`}>
           <h1>No Details of country '<span>{country}</span>' was found.</h1>
-          <p>Return to <Link to='/'>Homepage</Link></p>
+          <p>Return to <Link to='/rest-countries-api'>Homepage</Link></p>
         </section>
   )
 

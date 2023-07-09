@@ -13,7 +13,7 @@ const Header = ({ toggle, setToggle }) => {
     return (
         <header className={`header flex ${toggle ? 'dark' : 'light'}`}>
             <section className={`header-title flex ${toggle ? 'dark' : 'light'}`}>
-                <h1 onClick={() => navigate('/')}>Where in the world?</h1>
+                <h1 onClick={() => navigate('/rest-countries-api')}>Where in the world?</h1>
             </section>
             <section className='toggle' title={toggle ? 'Switch to Light Mode' : 'Switch to Dark Mode'} >
                 {toggle ?
