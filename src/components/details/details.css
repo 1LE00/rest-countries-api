@@ -5,6 +5,20 @@
   padding-inline: calc(var(--padding-inline) + 1rem);
 }
 
+
+@keyframes fades {
+  0%{
+    opacity: 0;
+    visibility: hidden;
+  }100%{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.missing-details{
+  animation: fades 2s ease-in-out;
+}
+
 .go-back {
   width: 110px;
   gap: 0.5rem;

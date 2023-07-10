@@ -31,23 +31,6 @@
   height: 160px;
 }
 
-.flag-container.skeleton {
-  height: 250px;
-  max-width: 350px;
-}
-
-.country-info.skel {
-  max-width: 350px;
-}
-
-.country-stats.skel {
-  gap: 0;
-}
-
-.country-stats.skel > :is(.one, .two, .three) {
-  margin-block-start: 1rem;
-}
-
 .skeleton-title:nth-child(2) {
   margin-block-start: 2rem;
 }
@@ -79,12 +62,6 @@
   .skeleton-container {
     gap: 2rem;
     justify-content: space-around;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .country-info.skel {
-    max-width: none;
   }
 }
 
