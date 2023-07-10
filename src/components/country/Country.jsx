@@ -5,7 +5,7 @@ const Country = ({ toggle, name, population, region, capital, flags }) => {
     const navigate = useNavigate();
 
     const gotoDetails = () => {
-        navigate(`/rest-countries-api/countries/${name}`);
+        navigate(`/countries/${name}`);
     }
 
     return (

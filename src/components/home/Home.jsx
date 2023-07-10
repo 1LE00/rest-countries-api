@@ -13,7 +13,9 @@ const Home = ({ search, setSearch, toggle, countries, selectedOption, setSelecte
                 selectedOption={selectedOption}
                 setSelectedOption={setSelectedOption}
             />
-            {isLoading || (countries.length === 0 && search.length === 0) ? <Skeleton toggle={toggle} /> : <Countries countries={countries} toggle={toggle} search={search} />}
+            {isLoading || (countries.length === 0 && search.length === 0)
+                ? <Skeleton toggle={toggle} /> :
+                <Countries countries={countries} toggle={toggle} search={search} />}
         </>
     )
 }

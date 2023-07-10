@@ -1,5 +1,5 @@
 import './search.css'
-import { ReactComponent as Second } from '../assets/icons/search-outline.svg'
+import { ReactComponent as Second } from '../../assets/icons/search-outline.svg'
 
 const Search = ({ search, setSearch, toggle, setFilter }) => {
     const handleSearch = (e) => {

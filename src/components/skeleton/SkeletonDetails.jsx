@@ -1,7 +1,7 @@
 import '../details/details.css'
 import '../skeleton/skeleton.css'
 import { Link } from 'react-router-dom'
-import { ReactComponent as Arrow } from '../assets/icons/arrow-left-long-solid.svg'
+import { ReactComponent as Arrow } from '../../assets/icons/arrow-left-long-solid.svg'
 
 const SkeletonDetails = ({ toggle }) => {
     return (

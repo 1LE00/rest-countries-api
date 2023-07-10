@@ -1,10 +1,10 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './layout/Layout';
-import Home from './home/Home';
-import Details from './details/Details';
+import Home from './components/home/Home';
+import Details from './components/details/Details';
 import { useState, useEffect } from 'react';
-import Missing from './missing/Missing';
+import Missing from './components/missing/Missing';
 
 function App() {
   const [toggle, setToggle] = useState(JSON.parse(localStorage.getItem('theme')) === null ? true : JSON.parse(localStorage.getItem('theme')).state);
@@ -47,7 +47,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/rest-countries-api" element={<Layout toggle={toggle} setToggle={setToggle} />}>
+      <Route path="/" element={<Layout toggle={toggle} setToggle={setToggle} />}>
         <Route index
           element={
             <Home
@@ -69,7 +69,7 @@ function App() {
         />
         <Route path='*' element={<Missing toggle={toggle} />} />
       </Route>
-      <Route path="/rest-countries-api/countries" element={<Layout toggle={toggle} setToggle={setToggle} />}>
+      <Route path="/countries" element={<Layout toggle={toggle} setToggle={setToggle} />}>
         <Route index
           element={
             <Home toggle={toggle}
@@ -91,7 +91,6 @@ function App() {
         <Route path=':country' element={<Details toggle={toggle} countries={countries} isLoading={isLoading} />} />
       </Route>
       <Route path='*' element={<Missing toggle={toggle} />} />
-
     </Routes>
   );
 }

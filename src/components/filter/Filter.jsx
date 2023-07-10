@@ -1,5 +1,5 @@
 import './filter.css'
-import { ReactComponent as Down } from '../assets/icons/chevron-down-outline.svg'
+import { ReactComponent as Down } from '../../assets/icons/chevron-down-outline.svg'
 import { useState, useRef, useEffect } from 'react';
 const Filter = ({ toggle, selectedOption, setSelectedOption }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
